@@ -17,6 +17,12 @@ func main() {
 		fmt.Printf(err.Error())
 		return
 	}
+	var adminUser *user.Admin
+	adminUser, err = user.NewAdmin("immail@gmail.com", "7765%%$$^jbvc")
+	if err != nil {
+		fmt.Printf(err.Error())
+	}
+	adminUser.AdminOutputDetails()
 	appUser.OutputDetails()
 	appUser.ClearuserDetails()
 	appUser.OutputDetails()
